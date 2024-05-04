@@ -16,6 +16,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
             umobile = request.POST.get('mobile')
             models.User.objects.create(name=uname, email=uemail, mobile=umobile)
             return redirect('index')
+            # return render(request, 'index.html')
         return render(request, 'useradd.html')
 
 

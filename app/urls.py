@@ -9,7 +9,8 @@ router.register(r'repayments', views.RepaymentViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', views.index),
+    path('api/', include(router.urls)),
     path('loan-list/', views.loan_list, name='loan_list'),
     path('add-repayment/', views.add_repayment, name='add_repayment')
 ]
